@@ -1,0 +1,112 @@
+@import "_fonts";
+
+* {
+	margin: 0;
+    padding: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html[lang="ru"] {
+	h1 {
+		font-family: 'Roboto';
+		font-size: 23px;
+		line-height: 23px;
+	}
+}
+
+body {
+	min-width: 320px;
+	font-family: 'Rajdhani Semibold';
+	background: url("../img/2021-1-bg.png") no-repeat #38424f;
+	background-size: cover;
+	color: #fff;
+	letter-spacing: 1px;
+    background-attachment: fixed;
+}
+
+img {
+	display: block;
+    max-width: 100%;
+}
+a {
+	display: block;
+}
+h1 {
+	text-align: center;
+	margin-bottom: 20px;
+	@media (max-width: 768px) {
+		font-size: 21px;
+		line-height: 18px;
+		padding: 0 10px;
+	}
+}
+h1 + p {
+	font-family: 'Roboto';
+	margin-bottom: 20px;
+	text-align: center;
+	@media (max-width: 768px) {
+		padding: 0 10px;
+	}
+}
+.container {
+	max-width: 960px;
+	margin: 20px auto 0;
+}
+.text-img-link-block {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid #475567;
+    border-radius: 10px;
+    background: #343d49;
+    padding: 20px;
+	@media (min-width: 800px) {
+		flex-wrap: wrap;
+		flex-direction: row;
+	}
+	&__item {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		margin: 0 15px 20px;
+		@media (min-width: 800px) {
+			flex: 0 0 46%;
+		}
+		h2 {
+			font-family: 'Roboto';
+			color: #b7c7e2;
+			text-align: center;
+			text-transform: uppercase;
+			font-weight: normal;
+			margin-bottom: 15px;
+			font-size: 19px;
+		}
+		a {
+			display: block;
+			overflow: hidden;
+			border: 3px solid #475e74;
+			border-radius: 12px;
+			&:hover {
+				border: 3px solid #55adff;
+    			transition: .3s;
+				img {
+					filter: opacity(65%);
+					transition: .3s;
+				}
+			}
+		}
+	}
+}
+.responsive-media {
+	position: relative;
+    padding-bottom: 53%;
+    overflow: hidden;
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+	}
+}
